@@ -71,7 +71,7 @@ elif difficulty == "hard":
     max_bullets = 20
     bullet_width = 20
     bullet_height = 20
-    bullet_speed = 
+    bullet_speed = 7
     maina_speed = 0.1
 
 
@@ -80,7 +80,7 @@ else:
 
 print(difficulty)
 
-enemy_img_lst = ["ProjExD_05/uni.png", "ProjExD_05/gomi.png", "ProjExD_05/bin.png"]
+enemy_img_lst = ["ex05/uni.png", "ex05/gomi.png", "ex05/bin.png"]
 enemy_img = enemy_img_lst[random.randint(0, len(enemy_img_lst)-1)]
 enemy_img = pg.image.load(enemy_img)
 enemy_img = pg.transform.scale(enemy_img, (bullet_width, bullet_height))
@@ -109,16 +109,16 @@ blue_effect_frames = 500
 blue = False
 
 # プレイキャラクター画像を取得
-explosion_ef = pg.image.load("ProjExD_05/explosion.gif")
-chara = pg.image.load("ProjExD_05/3.png")
+explosion_ef = pg.image.load("ex05/explosion.gif")
+chara = pg.image.load("ex05/3.png")
 
 # 背景画像の読み込み
-bg_img = pg.image.load("ProjExD_05/fig/kumo38.png")
+bg_img = pg.image.load("ex05/fig/kumo38.png")
 rotated_bg_img = pg.transform.flip(bg_img, False, True)
 
 # 闇の画像をロード
 dark_size = 1.5
-d_img = pg.image.load("ProjExD_05/darkness.jpeg")
+d_img = pg.image.load("ex05/darkness.jpeg")
 d_img = pg.transform.rotozoom(d_img, 0, dark_size)
 d_img_top = pg.transform.flip(d_img, False, True)
 
@@ -202,7 +202,7 @@ def player_direction(player_img):
 # global playable_path # 値はtitle.pyで更新される
 global chara_idx # 値はtitle.pyで更新される
 # chara_idx=0
-playable_lst = ["ProjExD_05/3.png", "ProjExD_05/koba.png", "ProjExD_05/bluebird_enjou.png"]
+playable_lst = ["ex05/3.png", "ex05/koba.png", "ex05/bluebird_enjou.png"]
 player_img = pg.image.load(playable_lst[chara_idx])
 player_img = pg.transform.scale(player_img, (48, 48)) # 48*48にリサイズ
 player_direction_dic = player_direction(player_img) # プレイヤーの顔の向きを決める辞書。引数には画像パスを指定
