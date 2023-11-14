@@ -82,7 +82,7 @@ class Canvas:
     def load_chara_images(self):
         self.chara_img_lst = [] # リストの初期化
         img_size_space = 0
-        playable_lst = ["ex05/3.png", "ex05/koba.png", "ex05/bluebird_enjou.png"] # プレイキャラクター
+        playable_lst = ["ProjExD_05/3.png", "ProjExD_05/koba.png", "ProjExD_05/bluebird_enjou.png"] # プレイキャラクター
         for i, img_path in enumerate(playable_lst):
             img = pg.image.load(img_path)
             player_img = pg.transform.scale(img, (120, 120))
@@ -297,7 +297,7 @@ def main(chara_idx=0, diff = None):
     pg.display.set_caption("TITLE_DISPLAY")
 
     # タイトル画面の背景画像
-    bg_img = pg.image.load("ex05/fig/pg_bg.jpg")
+    bg_img = pg.image.load("ProjExD_05/fig/pg_bg.jpg")
     bg_img = pg.transform.rotozoom(bg_img, 0, 1.75)
 
     # # 背景を動かすスレッドを開始（無限ループのため、マルチスレッドを利用して並行処理）
@@ -378,6 +378,6 @@ if __name__ == "__main__":
     if in_game:
         ### 別のpytonスクリプトを実行するexec()関数の利用
         # chara_idxはグローバル変数としてゲーム先のスクリプトで使われる
-        exec(open("ex05/nobore_kokaton.py", encoding="utf8").read())
+        exec(open("ProjExD_05/nobore_kokaton.py", encoding="utf8").read())
     pg.quit()
     sys.exit()
