@@ -156,14 +156,14 @@ running = True
 clock = pg.time.Clock()
 dark_y = screen_height # 闇の初期位置
 dark_speed = 1 # 闇の浸食する速さ
-scroll_area = 2/5 # スクロールを開始する範囲（一番上から）
+# scroll_area = 2/5 # スクロールを開始する範囲（一番上から）
 
 # 画像をスクロールさせる為に必要な変数ども
 bg_height = 1080
 tmr = 0
 bg_y = 0
 bg_y_2 = bg_height
-scroll_area = 2/5 # スクロールを開始する範囲（一番上から）
+scroll_area = 1/2 # スクロールを開始する範囲（一番上から）
 
 move_key_dic = {
                 pg.K_UP: (0, -5),
