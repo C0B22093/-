@@ -35,10 +35,11 @@ r = 0
 goal = 10000
 
 #弾の最大数やサイズ、速度、生成間隔を設定
-max_bullets = 10
-bullet_width = 10
-bullet_height = 10
-bullet_speed = 10
+## 何も難易度が選択されなかったらmediumにする
+max_bullets = 15
+bullet_width = 15
+bullet_height = 15
+bullet_speed = 5
 
 homing_bullet_turn = 0
 
